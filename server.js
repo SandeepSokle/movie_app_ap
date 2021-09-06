@@ -41,5 +41,9 @@ server.get("/genre",(req,res)=>{
 
 
 
-////start server on a port
-server.listen(process.env.PORT || 4000);
+////start server on a port 4000
+
+const port = process.env.PORT || 4000;
+server.listen(port, function(req, res) {
+  console.log("Server has started at port 4000");
+});
