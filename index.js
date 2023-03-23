@@ -3,6 +3,7 @@
 
 
 let express = require("express");
+let cors = require("cors");
 let data = require("./data.json");
 
 
@@ -11,6 +12,7 @@ let data = require("./data.json");
 
 //////server bnate hai but only create not start:
 let server = express();
+server.use(cors())
 
 
 server.get("/movies",(req,res)=>{
